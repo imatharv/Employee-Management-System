@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS links -->
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+        html,
+        body {
+            height: 100%;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            background: rgb(108, 9, 121);
+            background: linear-gradient(315deg, rgba(108, 9, 121, 1) 23%, rgba(0, 98, 141, 1) 100%);
+        }
+    </style>
+    <title>New employee registration</title>
+</head>
+
+<body>
+    <form class="registration-form" action="#" method="post">
+        <div class="header-container">
+            <h2 class="h3 mb-3 font-weight-normal">Employee Registration</h1>
+            <p>
+                Provide the neccessary information for new employee's registration.
+            </p>
+        </div>
+        <div class="form-container">
+            <div class="form">
+                <div class="form-group">
+                    <label for="fname" class="form-lable">First name</label>
+                    <input type="text" id="fname" name="fname" class="form-input" required>
+                </div>
+                <div class="form-group">
+                    <label for="lname" class="form-lable">Last name</label>
+                    <input type="text" id="lname" name="lname" class="form-input" required>
+                </div>
+                <div class="form-group">
+                    <label for="city" class="form-lable">City</label>
+                    <input type="text" id="city" name="city" class="form-input" required>
+                </div>
+                <div class="form-group">
+                    <label for="state" class="form-lable">State</label>
+                    <input type="text" id="state" name="state" class="form-input" required>
+                </div>
+                <div class="form-group">
+                    <label for="salary" class="form-lable">Salary</label>
+                    <input type="text" id="salary" name="salary" class="form-input" required>
+                </div>
+                <div class="form-group">
+                    <label for="email" class="form-lable">Email</label>
+                    <input type="text" id="email" name="email" class="form-input" required>
+                </div>
+            </div>
+        </div>
+        <div class="footer-container">
+            <input type="submit" id="submit" name="submit" value="Submit" class="button button-navbar">
+            <p style="text-align: center;">All rights reserved &copy; 2021</p>
+        </div>
+    </form>
+</body>
+</html>

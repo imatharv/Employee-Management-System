@@ -1,0 +1,151 @@
+/* Heading */
+.navbar-heading {
+  font-size: 26px;
+  font-weight: 400;
+  color: rgb(20, 20, 20);
+}
+.navbar-sub-heading {
+  font-size: 14px;
+  font-weight: 600;
+  color: rgb(132, 84, 247);
+  text-transform: uppercase;
+}
+.main-heading {
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 28px;
+  color: rgb(132, 84, 247);
+}
+
+/* Buttons */
+.button {
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid transparent;
+  padding: 6px 12px;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer !important;
+  transition: 0.3s;
+}
+.button-navbar {
+  background-color: rgb(132, 84, 247);
+  box-shadow: 0px 5px 20px rgba(133, 84, 247, 0.527);
+  color: #ffffff;
+  text-decoration: none !important;
+}
+.button-navbar:hover {
+  box-shadow: 0px 3px 10px rgba(133, 84, 247, 0.527);
+  background-color: rgb(144, 99, 247);
+  cursor: pointer !important;
+}
+.action-button {
+  color: #333333;
+  margin-right: 5px;
+  background-color: rgb(219, 219, 219);
+  text-decoration: none !important;
+}
+
+/* Table */
+.table {
+  width: 100%;
+  margin-bottom: 15px;
+  border-collapse: collapse;
+  border-spacing: 2px;
+  overflow-x: scroll;
+}
+table,
+thead,
+th {
+  font-weight: 600;
+  padding-bottom: 15px;
+  border-bottom: 1.2px solid rgba(151, 151, 151, 0.37) !important;
+  text-align: left;
+}
+table,
+tbody,
+td {
+  border-bottom: 1px solid rgba(151, 151, 151, 0.37) !important;
+  border-collapse: collapse;
+  padding: 20px 2px 20px 2px;
+  font-weight: 400;
+}
+
+/* Form */
+.form-lable {
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 5px;
+  display: block;
+}
+.form-input {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 14px;
+  display: block;
+  padding: 5px;
+  border-radius: 3px;
+  border: 1.5px solid rgba(151, 151, 151, 0.37) !important;
+}
+.form {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 48%;
+}
+.registration-form {
+  width: 100%;
+  max-width: 420px;
+  padding: 15px 30px 15px 30px;
+  margin: auto;
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: 0px 12px 25px rgba(44, 44, 44, 0.3);
+}
+.form-container {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.registration-form h2 {
+  text-align: center;
+  font-size: 30px !important;
+  font-weight: 400;
+  color: rgb(132, 84, 247);
+}
+.registration-form p {
+  margin-top: -10px;
+  margin-bottom: 30px;
+  font-weight: 500;
+  font-size: 18px !important;
+  text-align: center;
+}
+.header-container {
+  border-bottom: 1.2px solid rgba(151, 151, 151, 0.37) !important;
+  margin-bottom: 30px;
+}
+.footer-container {
+  text-align: center;
+}
+.footer-container input {
+  margin-bottom: 40px;
+  padding-left: 30px !important;
+  padding-right: 30px !important;
+}
+.footer-container p {
+  margin-bottom: 10px;
+  font-size: 14px !important;
+  font-weight: 400;
+  color: darkgray;
+}

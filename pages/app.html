@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/modal.css">
+
+    <title>Dashboard</title>
+</head>
+
+<body>
+    <nav class="title-container">
+        <div class="title-bar">
+            <span>Employee Management System</span>
+        </div>
+    </nav>
+    <div class="container">
+        <nav class="navbar">
+            <div>
+                <div class="navbar-sub-heading">
+                    overview
+                </div>
+                <div class="navbar-heading">
+                    Dashboard
+                </div>
+            </div>
+            <div>
+                <a class="button button-navbar" type="button" href="employee-registration.html">
+                    <i class="bi bi-plus-circle" style="margin-right: 2px;"></i> Add Employee 
+                </a>
+            </div>
+        </nav>
+        <div class="main-content">
+            <div class="main-heading">Employee information</div>
+            <div class="table-container">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>First name</th>
+                            <th>Last name</th>
+                            <th>City</th>
+                            <th>State</th>
+                            <th>Salary</th>
+                            <th>Email</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Atharva</td>
+                            <td>Joshi</td>
+                            <td>Jalgaon</td>
+                            <td>Maharashtra</td>
+                            <td>55,000</td>
+                            <td>atharva@email.com</td>
+                            <td>
+                                <button class="button action-button" type="button" id="myBtn">
+                                    <i class="bi bi-pencil-square" style="margin-right: 2px;"></i> Edit
+                                </button>
+                                <button class="button action-button" type="button">
+                                    <i class="bi bi-trash" style="margin-right: 2px;"></i> Delete
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Edit employee details modal -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <form action="#">
+                <div class="modal-header">
+                    <span class="close">&times;</span>
+                    <h3>Edit employee details</h2>
+                </div>
+                <div class="modal-body">
+                    <div class="form">
+                        <div class="form-group">
+                            <label for="fname" class="form-lable">First name</label>
+                            <input type="text" id="fname" name="fname" class="form-input">
+                        </div>
+                        <div class="form-group">
+                            <label for="lname" class="form-lable">Last name</label>
+                            <input type="text" id="lname" name="lname" class="form-input">
+                        </div>
+                        <div class="form-group">
+                            <label for="city" class="form-lable">City</label>
+                            <input type="text" id="city" name="city" class="form-input">
+                        </div>
+                        <div class="form-group">
+                            <label for="state" class="form-lable">State</label>
+                            <input type="text" id="state" name="state" class="form-input">
+                        </div>
+                        <div class="form-group">
+                            <label for="salary" class="form-lable">Salary</label>
+                            <input type="text" id="salary" name="salary" class="form-input">
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="form-lable">Email</label>
+                            <input type="text" id="email" name="email" class="form-input">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <input type="submit" class="button button-navbar" value="Update">
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- JS Links -->
+    <script src="/scripts/modal.js"></script>
+
+</body>
+
+</html>
