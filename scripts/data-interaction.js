@@ -1,9 +1,4 @@
-let employeeID = '';
-
 function getData() {
-    var editBtn = '<button id="myBtn" class="button action-button myBtn" type="button" onclick="openModal()"><i class="bi bi-pencil-square" style="margin-right: 2px;"></i>Edit</button>';
-    var deleteBtn = '<button class="button action-button" type="button"><i class="bi bi-trash" style="margin-right: 2px;"></i>Delete</button >';
-
     $.ajax({
         type: 'GET',
         url: 'http://localhost:3000/employees',
@@ -18,7 +13,7 @@ function getData() {
     appendTable = (data) => {
         let row = "";
         for (let i = 0; i < data.length; i++) {
-            row +=
+            row =
                 `<tr>
                     <td>${data[i].fname}</td>
                     <td>${data[i].lname}</td>
@@ -26,12 +21,10 @@ function getData() {
                     <td>${data[i].state}</td>
                     <td>${data[i].salary}</td>
                     <td>${data[i].email}</td>
-                    <td>` + editBtn + `</td>
-                    <td>` + deleteBtn + `</td>
-                    <td id="id" style="display:none !important">${data[i].id}</td>
+                    <td><button id="myBtn" class="button action-button myBtn" type="button" onclick="openModal()"><i class="bi bi-pencil-square" style="margin-right: 2px;"></i>Edit</button></td>
+                    <td><button id="myDelBtn" class="button action-button myDelBtn" type="button" onclick="deleteData(${data[i].id})"><i class="bi bi-trash" style="margin-right: 2px;"></i>Delete</button></td>
                 </tr>`;
             $('#tbody').append(row);
-            console.log(row);
         }
     }
 }
@@ -74,25 +67,24 @@ function postData() {
         document.getElementById("email").value = '';
     }
 }
-// function putData() {
+function putData() {
 
-// }
+}
 
-// function deleteData() {
-//     let employeeID = $(this).data(employeeID);
-//     $.ajax({
-//         type: 'DELETE',
-//         url: 'http://localhost:3000/employees' + employeeID,
-//         success: function (result) {
-//             alert("Record successfully deleted.");
-//             window.location.reload();
-//         },
-//         error: function (result) {
-//             alert(result);
-//         }
-//     });
 
-// }
+function deleteData(id) {
+    $.ajax({
+        type: 'DELETE',
+        url: 'http://localhost:3000/employees/' + id,
+        success: function (result) {
+            alert("Record successfully deleted.");
+            window.location.reload();
+        },
+        error: function (result) {
+            alert(result);
+        }
+    });
+}
 
 // let fname = document.getElementById("fnameTbl").value;
 // let lname = document.getElementById("lnameTbl").value;
