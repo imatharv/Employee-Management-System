@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8"> 
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -32,14 +32,15 @@
             </div>
             <div>
                 <a class="button button-navbar" type="button" href="employee-registration.html">
-                    <i class="bi bi-plus-circle" style="margin-right: 2px;"></i> Add Employee 
+                    <i class="bi bi-plus-circle" style="margin-right: 2px;"></i> Add Employee
                 </a>
             </div>
         </nav>
+
         <div class="main-content">
             <div class="main-heading">Employee information</div>
             <div class="table-container">
-                <table class="table">
+                <table class="table" id="myTable">
                     <thead>
                         <tr>
                             <th>First name</th>
@@ -51,29 +52,14 @@
                             <th>Action</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <td>Atharva</td>
-                            <td>Joshi</td>
-                            <td>Jalgaon</td>
-                            <td>Maharashtra</td>
-                            <td>55,000</td>
-                            <td>atharva@email.com</td>
-                            <td>
-                                <button class="button action-button" type="button" id="myBtn">
-                                    <i class="bi bi-pencil-square" style="margin-right: 2px;"></i> Edit
-                                </button>
-                                <button class="button action-button" type="button">
-                                    <i class="bi bi-trash" style="margin-right: 2px;"></i> Delete
-                                </button>
-                            </td>
-                        </tr>
+                    <tbody id="tbody">
+
                     </tbody>
                 </table>
             </div>
         </div>
     </div>
-    
+
     <!-- Edit employee details modal -->
     <div id="myModal" class="modal">
         <div class="modal-content">
@@ -118,8 +104,17 @@
     </div>
 
     <!-- JS Links -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+        </script>
+    <script src="/scripts/data-interaction.js"></script>
+    <script>
+        $(document).ready(function () {
+            getData();
+        });
+    </script>
     <script src="/scripts/modal.js"></script>
-
 </body>
 
 </html>

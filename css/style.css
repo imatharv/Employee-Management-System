@@ -49,6 +49,11 @@
 }
 
 /* Table */
+.table-container {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+}
 .table {
   width: 100%;
   margin-bottom: 15px;

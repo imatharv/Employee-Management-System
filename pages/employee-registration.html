@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8"> 
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- CSS links -->
@@ -10,6 +11,7 @@
         html,
         body {
             height: 100%;
+            margin: 0;
         }
 
         body {
@@ -19,15 +21,15 @@
             background: linear-gradient(315deg, rgba(108, 9, 121, 1) 23%, rgba(0, 98, 141, 1) 100%);
         }
     </style>
-    <title>New employee registration</title>
+    <title>Add New Employee</title>
 </head>
 
 <body>
-    <form class="registration-form" action="#" method="post">
+    <div class="registration-form">
         <div class="header-container">
-            <h2 class="h3 mb-3 font-weight-normal">Employee Registration</h1>
+            <h2 class="h3 mb-3 font-weight-normal">Add New Employee</h2>
             <p>
-                Provide the neccessary information for new employee's registration.
+                Provide the neccessary information to add a new employee.
             </p>
         </div>
         <div class="form-container">
@@ -59,9 +61,17 @@
             </div>
         </div>
         <div class="footer-container">
-            <input type="submit" id="submit" name="submit" value="Submit" class="button button-navbar">
-            <p style="text-align: center;">All rights reserved &copy; 2021</p>
+            <input type="button" id="submit" name="submit" value="Submit" onclick="postData()"
+                class="button button-navbar">
+            <p style="text-align: center;">After submitting you will be redireted to the dashboard.</p>
         </div>
-    </form>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+        </script>
+    <script src="/scripts/data-interaction.js"></script>
 </body>
+
 </html>

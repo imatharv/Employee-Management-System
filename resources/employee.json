@@ -1,25 +1,13 @@
 {
-    "employees": 
-    [ 
-        {
-            "id": "101",
-            "name": "Shyam",
-            "salary": "50,000"
-        },
-        {
-            "id": "102",
-            "name": "Atharva",
-            "salary": "55,000"
-        },
-        {
-            "id": "103",
-            "name": "Sakshi",
-            "salary": "60,000"
-        },
-        {
-            "id": "104",
-            "name": "Ruchee",
-            "salary": "65,000"
-        }
-    ]
+  "employees": [
+    {
+      "fname": "Atharva",
+      "lname": "Joshi",
+      "city": "Jalgaon",
+      "state": "Maharashtra",
+      "salary": "55,000",
+      "email": "atharva@email",
+      "id": 1
+    }
+  ]
 }
