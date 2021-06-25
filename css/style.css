@@ -58,27 +58,29 @@ html, body, * {
     overflow-x: auto;
 }
 .table {
-  width: 100%;
+  table-layout: fixed !important;
+  min-width: 100%;
   margin-bottom: 15px;
   border-collapse: collapse;
   border-spacing: 2px;
-  overflow-x: scroll;
 }
-table,
 thead,
 th {
+  white-space: nowrap!important;
   font-weight: 600;
   padding-bottom: 15px;
   border-bottom: 1.2px solid rgba(151, 151, 151, 0.38) !important;
   text-align: left;
+  table-layout: fixed !important;
 }
-table,
 tbody,
 td {
+  white-space: nowrap!important;
   border-bottom: 1px solid rgba(151, 151, 151, 0.37) !important;
   border-collapse: collapse;
   padding: 20px 2px 20px 2px;
   font-weight: 400;
+  table-layout: fixed !important;
 }
 
 /* Form */
@@ -91,11 +93,14 @@ td {
 .form-input {
   font-size: 16px;
   font-weight: 500;
-  margin-bottom: 14px;
+  margin-bottom: 5px;
   display: block;
   padding: 5px;
   border-radius: 3px;
   border: 1.5px solid rgba(151, 151, 151, 0.37) !important;
+}
+.form-input-email {
+  padding: 5px 30px 5px 5px;
 }
 .form {
   display: flex;
@@ -109,6 +114,8 @@ td {
   flex-direction: column;
   justify-content: space-between;
   width: 48%;
+  margin-bottom: 15px;
+  position: relative;
 }
 .registration-form {
   width: 100%;

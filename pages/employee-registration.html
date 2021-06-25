@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- CSS links -->
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/validations.css">
     <style>
         html,
         body {
@@ -37,26 +38,50 @@
                 <div class="form-group">
                     <label for="fname" class="form-lable">First name</label>
                     <input type="text" id="fname" name="fname" class="form-input" required>
+                    <div class="">
+                        <span class="validation-container-fname success"><i class="bi bi-check2"></i></span>
+                        <span class="validation-container-fname error"><i class="bi bi-x"></i></span>
+                    </div>
                 </div>
                 <div class="form-group">
                     <label for="lname" class="form-lable">Last name</label>
                     <input type="text" id="lname" name="lname" class="form-input" required>
+                    <div class="">
+                        <span class="validation-container-lname success"><i class="bi bi-check2"></i></span>
+                        <span class="validation-container-lname error"><i class="bi bi-x"></i></span>
+                    </div>
                 </div>
                 <div class="form-group">
                     <label for="city" class="form-lable">City</label>
                     <input type="text" id="city" name="city" class="form-input" required>
+                    <div class="">
+                        <span class="validation-container-city success"><i class="bi bi-check2"></i></span>
+                        <span class="validation-container-city error"><i class="bi bi-x"></i></span>
+                    </div>
                 </div>
                 <div class="form-group">
                     <label for="state" class="form-lable">State</label>
                     <input type="text" id="state" name="state" class="form-input" required>
+                    <div class="">
+                        <span class="validation-container-state success"><i class="bi bi-check2"></i></span>
+                        <span class="validation-container-state error"><i class="bi bi-x"></i></span>
+                    </div>
                 </div>
                 <div class="form-group">
                     <label for="salary" class="form-lable">Salary</label>
                     <input type="text" id="salary" name="salary" class="form-input" required>
+                    <div class="">
+                        <span class="validation-container-salary success"><i class="bi bi-check2"></i></span>
+                        <span class="validation-container-salary error"><i class="bi bi-x"></i></span>
+                    </div>
                 </div>
                 <div class="form-group">
                     <label for="email" class="form-lable">Email</label>
-                    <input type="text" id="email" name="email" class="form-input" required>
+                    <input type="text" id="email" name="email" class="form-input form-input-email" required>
+                    <div class="">
+                        <span class="validation-container-email success"><i class="bi bi-check2"></i></span>
+                        <span class="validation-container-email error"><i class="bi bi-x"></i></span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -71,6 +96,7 @@
         integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer">
         </script>
+    <script src="/scripts/validations.js"></script>
     <script src="/scripts/data-interaction.js"></script>
 </body>
 

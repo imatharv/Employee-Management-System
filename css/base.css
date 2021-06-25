@@ -24,6 +24,7 @@ body {
   padding-left: 50px;
   margin-right: auto;
   margin-left: auto;
+  padding-bottom: 100px;
 }
 
 /* Main */
@@ -39,7 +40,7 @@ body {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 30px 0px 15px 0px;
+  padding: 40px 0px 15px 0px;
   border-bottom: 1px solid rgba(155, 155, 155, 0.37);
 }
 
@@ -47,13 +48,18 @@ body {
 .title-container {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   background-color: rgb(105, 67, 194);
 }
-.title-bar {
+.title-bar, .version {
   color: #fff;
-  font-weight: 400 !important;
-  font-size: 22px;
-  align-self: center;
+  font-weight: 300 !important;
+  font-size: 18px;
   padding: 20px;
+}
+.title-bar .name {
+  margin-left: 6px;
+}
+.logo {
+  border-right: 3px solid rgb(243, 8, 192);
 }

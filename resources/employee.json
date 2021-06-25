@@ -1,6 +1,15 @@
 {
   "employees": [
     {
+      "fname": "Atharva",
+      "lname": "Joshi",
+      "city": "Jalgaon",
+      "state": "Maharashtra",
+      "salary": "55000",
+      "email": "atharva@email",
+      "id": 1
+    },
+    {
       "fname": "Ruchee",
       "lname": "Shukla",
       "city": "Jalgaon",
@@ -8,6 +17,24 @@
       "salary": "50,000",
       "email": "ruchee@email",
       "id": 2
+    },
+    {
+      "fname": "Shyam",
+      "lname": "Naik",
+      "city": "Nashik",
+      "state": "Maharashtra",
+      "salary": "50,000",
+      "email": "shyam@email",
+      "id": 3
+    },
+    {
+      "fname": "Sakshi",
+      "lname": "Mujumdar",
+      "city": "Nashik",
+      "state": "Maharashtra",
+      "salary": "55,000",
+      "email": "sakshi@email",
+      "id": 4
     }
   ]
 }
