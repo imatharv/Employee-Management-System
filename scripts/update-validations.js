@@ -20,12 +20,12 @@ $('#fname').on('keyup', function () {
     if (fName == true) {
         $('.validation-container-fname.success').show();
         checkFname = "true";
+        checkAll();
     } else {
         $('.validation-container-fname.error').show();
         checkFname = "false";
         $('#updateBtn').attr('disabled', 'disabled');
     }
-    checkAll();
 });
 $('#lname').on('keyup', function () {
     $('.validation-container-lname').hide();
@@ -33,12 +33,12 @@ $('#lname').on('keyup', function () {
     if (lName == true) {
         $('.validation-container-lname.success').show();
         checkLname = "true";
+        checkAll();
     } else {
         $('.validation-container-lname.error').show();
         checkLname = "false";
         $('#updateBtn').attr('disabled', 'disabled');
     }
-    checkAll();
 });
 $('#city').on('keyup', function () {
     $('.validation-container-city').hide();
@@ -46,12 +46,12 @@ $('#city').on('keyup', function () {
     if (City == true) {
         $('.validation-container-city.success').show();
         checkCity = "true";
+        checkAll();
     } else {
         $('.validation-container-city.error').show();
         checkCity = "false";
         $('#updateBtn').attr('disabled', 'disabled');
     }
-    checkAll();
 });
 $('#state').on('keyup', function () {
     $('.validation-container-state').hide();
@@ -59,12 +59,12 @@ $('#state').on('keyup', function () {
     if (State == true) {
         $('.validation-container-state.success').show();
         checkState = "true";
+        checkAll();
     } else {
         $('.validation-container-state.error').show();
         checkState = "false";
         $('#updateBtn').attr('disabled', 'disabled');
     }
-    checkAll();
 });
 $('#salary').on('keyup', function () {
     $('.validation-container-salary').hide();
@@ -72,12 +72,12 @@ $('#salary').on('keyup', function () {
     if (Salary == true) {
         $('.validation-container-salary.success').show();
         checkSalary = "true";
+        checkAll();
     } else {
         $('.validation-container-salary.error').show();
         checkSalary = "false";
         $('#updateBtn').attr('disabled', 'disabled');
     }
-    checkAll();
 });
 $('#email').on('keyup', function () {
     $('.validation-container-email').hide();
@@ -85,12 +85,12 @@ $('#email').on('keyup', function () {
     if (email == true) {
         $('.validation-container-email.success').show();
         checkEmail = "true";
+        checkAll();
     } else {
         $('.validation-container-email.error').show();
         checkEmail = "false";
         $('#updateBtn').attr('disabled', 'disabled');
     }
-    checkAll();
 });
 
 function checkAll() {
@@ -98,4 +98,3 @@ function checkAll() {
         $('#updateBtn').removeAttr('disabled');
     }
 }
-

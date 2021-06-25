@@ -1,3 +1,6 @@
+$(document).ready(function () {
+    getData();
+});
 function getData() {
     $.ajax({
         type: 'GET',
@@ -54,7 +57,7 @@ function postData() {
             window.location.href = "/pages/app.html";
         },
         error: function (result) {
-            alert(result);
+            console.log(result);
         }
     });
 
@@ -69,8 +72,6 @@ function postData() {
 }
 var modal = document.getElementById("myModal");
 function openModal(id, fname, lname, city, state, salary, email) {
-    console.log("Entered in openModal() function");
-
     modal.style.display = "block";
 
     document.getElementById("empid").value = id;
@@ -82,8 +83,6 @@ function openModal(id, fname, lname, city, state, salary, email) {
     document.getElementById("email").value = email;
 }
 function putData() {
-    console.log("Entered in putData() function");
-
     let empid = document.getElementById("empid").value;
     let fname = document.getElementById("fname").value;
     let lname = document.getElementById("lname").value;
@@ -106,11 +105,10 @@ function putData() {
         url: 'http://localhost:3000/employees/' + empid,
         data: userData,
         success: function (result) {
-            alert("Record successfully updated.")
             window.location.reload();
         },
         error: function (result) {
-            alert(result);
+            console.log(result);
         }
     });
 }
@@ -119,11 +117,10 @@ function deleteData(id) {
         type: 'DELETE',
         url: 'http://localhost:3000/employees/' + id,
         success: function (result) {
-            alert("Record successfully deleted.");
             window.location.reload();
         },
         error: function (result) {
-            alert(result);
+            console.log(result);
         }
     });
 }

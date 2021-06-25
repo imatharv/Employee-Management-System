@@ -1,5 +1,10 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css");
-
+.validation-container {
+    display: none;
+    position: absolute;
+    right: 2%;
+    top: 40%;
+}
 .validation-container-fname {
     display: none;
     position: absolute;

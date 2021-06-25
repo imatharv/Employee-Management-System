@@ -35,6 +35,15 @@
       "salary": "55,000",
       "email": "sakshi@email",
       "id": 4
+    },
+    {
+      "fname": "Nakul",
+      "lname": "Upadhyay",
+      "city": "Banglore",
+      "state": "Karnataka",
+      "salary": "60000",
+      "email": "nakul@email",
+      "id": 5
     }
   ]
 }

@@ -6,7 +6,7 @@
 html,
 body {
   font-family: "Work Sans", sans-serif;
-  margin: 0; 
+  margin: 0;
   padding: 0;
   background-color: #f8f9fa;
 }
@@ -51,7 +51,8 @@ body {
   justify-content: space-between;
   background-color: rgb(105, 67, 194);
 }
-.title-bar, .version {
+.title-bar,
+.version {
   color: #fff;
   font-weight: 300 !important;
   font-size: 18px;
@@ -62,4 +63,24 @@ body {
 }
 .logo {
   border-right: 3px solid rgb(243, 8, 192);
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  .main-content {
+    margin-top: 20px;
+    padding: 15px;
+  }
+  .navbar {
+    padding-top: 20px;
+  }
+  .title-container {
+    justify-content: center;
+  }
+  .version {
+    display: none;
+  }
 }

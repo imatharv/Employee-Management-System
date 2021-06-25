@@ -20,11 +20,11 @@ $('#fname').on('keyup', function () {
     if (fName == true) {
         $('.validation-container-fname.success').show();
         checkFname = "true";
+        checkAll();
     } else {
         $('.validation-container-fname.error').show();
         checkFname = "false";
     }
-    checkAll();
 });
 $('#lname').on('keyup', function () {
     $('.validation-container-lname').hide();
@@ -32,11 +32,11 @@ $('#lname').on('keyup', function () {
     if (lName == true) {
         $('.validation-container-lname.success').show();
         checkLname = "true";
+        checkAll();
     } else {
         $('.validation-container-lname.error').show();
         checkLname = "false";
     }
-    checkAll();
 });
 $('#city').on('keyup', function () {
     $('.validation-container-city').hide();
@@ -44,11 +44,11 @@ $('#city').on('keyup', function () {
     if (City == true) {
         $('.validation-container-city.success').show();
         checkCity = "true";
+        checkAll();
     } else {
         $('.validation-container-city.error').show();
         checkCity = "false";
     }
-    checkAll();
 });
 $('#state').on('keyup', function () {
     $('.validation-container-state').hide();
@@ -56,11 +56,11 @@ $('#state').on('keyup', function () {
     if (State == true) {
         $('.validation-container-state.success').show();
         checkState = "true";
+        checkAll();
     } else {
         $('.validation-container-state.error').show();
         checkState = "false";
     }
-    checkAll();
 });
 $('#salary').on('keyup', function () {
     $('.validation-container-salary').hide();
@@ -68,11 +68,11 @@ $('#salary').on('keyup', function () {
     if (Salary == true) {
         $('.validation-container-salary.success').show();
         checkSalary = "true";
+        checkAll();
     } else {
         $('.validation-container-salary.error').show();
         checkSalary = "false";
     }
-    checkAll();
 });
 $('#email').on('keyup', function () {
     $('.validation-container-email').hide();
@@ -80,11 +80,11 @@ $('#email').on('keyup', function () {
     if (email == true) {
         $('.validation-container-email.success').show();
         checkEmail = "true";
+        checkAll();
     } else {
         $('.validation-container-email.error').show();
         checkEmail = "false";
     }
-    checkAll();
 });
 
 function checkAll() {
@@ -93,3 +93,28 @@ function checkAll() {
     }
 }
 
+//-------------------------------------------------------------------------------
+
+// $('.form-input').on('keyup', function () {
+//     Validation logic goes here
+// });
+
+// fnameRegExp.test($('#fname').val()) ? $('.validation-container.success').show() : $('.validation-container.error').show();
+    
+//-------------------------------------------------------------------------------
+
+// window.onload = function(){
+//     var inputs = document.getElementsByClassName(".form-input");
+//     if(inputs){
+//         for(var i=0; i<inputs.length; i++){
+//             inputs[i].addEventListener("keyup",validateInput);
+//         }
+//     }
+// };
+// function validateInput(){
+//     if (this.value == "") {
+//         $('.validation-container-email.error').show();
+//     } else {
+//         $('.validation-container-email.success').show();
+//     }
+// }

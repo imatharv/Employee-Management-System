@@ -1,4 +1,6 @@
-html, body, * {
+html,
+body,
+* {
   font-family: "Work Sans", sans-serif;
 }
 /* Heading  */
@@ -51,11 +53,11 @@ html, body, * {
   text-decoration: none !important;
 }
 
-/* Table */ 
+/* Table */
 .table-container {
-    display: block;
-    width: 100%;
-    overflow-x: auto;
+  display: block;
+  width: 100%;
+  overflow-x: auto;
 }
 .table {
   table-layout: fixed !important;
@@ -66,7 +68,7 @@ html, body, * {
 }
 thead,
 th {
-  white-space: nowrap!important;
+  white-space: nowrap !important;
   font-weight: 600;
   padding-bottom: 15px;
   border-bottom: 1.2px solid rgba(151, 151, 151, 0.38) !important;
@@ -75,10 +77,10 @@ th {
 }
 tbody,
 td {
-  white-space: nowrap!important;
+  white-space: nowrap !important;
   border-bottom: 1px solid rgba(151, 151, 151, 0.37) !important;
   border-collapse: collapse;
-  padding: 20px 2px 20px 2px;
+  padding: 3px 45px 3px 0px;
   font-weight: 400;
   table-layout: fixed !important;
 }
@@ -163,4 +165,38 @@ td {
   font-size: 14px !important;
   font-weight: 400;
   color: darkgray;
+}
+
+@media screen and (max-width: 600px) {
+  .registration-form {
+    padding: 15px;
+  }
+  .table th,
+  td {
+    padding: 3px 30px 3px 0px;
+  }
+  .table th {
+    padding-bottom: 12px;
+  }
+  .main-heading {
+    margin-bottom: 10px;
+    font-size: 17px;
+    font-weight: 600;
+  }
+  .action-button {
+    padding: 3px 9px;
+    margin: 4px 0px;
+  }
+}
+
+@media screen and (max-width: 472px) {
+  .registration-form {
+    margin-inline: 10px;
+  }
+}
+
+@media screen and (min-width: 600  and max-width: 900px) {
+  .registration-form {
+    margin-inline: 10px;
+  }
 }

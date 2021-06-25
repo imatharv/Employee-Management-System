@@ -1,9 +1,11 @@
-html, body, * {
+html,
+body,
+* {
   font-family: "Work Sans", sans-serif;
 }
 /* The Modal (background) */
 .modal {
-  display: none; /* Hidden by default */ 
+  display: none; /* Hidden by default */
   justify-content: center;
   align-self: center;
   position: fixed; /* Stay in place */
@@ -20,7 +22,7 @@ html, body, * {
 
 /* Modal Content */
 .modal-content {
-  position: relative; 
+  position: relative;
   background-color: #fefefe;
   margin: auto;
   padding: 0px 20px 0px 20px;
@@ -81,4 +83,34 @@ html, body, * {
   margin-bottom: 20px;
   text-align: right;
   padding-right: 5px;
+}
+
+@media screen and (max-width: 600px) {
+  .modal-content {
+    width: 85%;
+    padding: 10px;
+  }
+  .close {
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: -5px;
+    margin-right: 2px;
+  }
+  .modal-header {
+    margin-bottom: 20px;
+  }
+  .modal-header h3 {
+    margin-top: 5px;
+    margin-bottom: 20px;
+    font-weight: 600;
+  }
+  .modal-body {
+    margin-bottom: 0px;
+  }
+  .modal-footer {
+    margin-bottom: 5px;
+    padding-right: 5px;
+    text-align: center;
+  }
 }
