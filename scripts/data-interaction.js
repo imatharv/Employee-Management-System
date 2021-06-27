@@ -1,6 +1,7 @@
 $(document).ready(function () {
     getData();
 });
+
 function getData() {
     $.ajax({
         type: 'GET',
@@ -18,6 +19,7 @@ function getData() {
         for (let i = 0; i < data.length; i++) {
             row =
                 `<tr>
+                    <td>${i + 1}</td>
                     <td>${data[i].fname}</td>
                     <td>${data[i].lname}</td>
                     <td>${data[i].city}</td>
@@ -32,13 +34,36 @@ function getData() {
     }
 }
 function postData() {
+    var inputs = document.getElementsByClassName("form-input");
+    var count = 0;
+    if (inputs) {
+        for (var i = 0; i < inputs.length; i++) {
+            // field = $(this).parent().find('.validation-message');
+            if (checkEmpty(inputs[i]) == false) {
+                count = count + 1;
+                console.log(count);
+            }
+        }
+    }
+    if (count === inputs.length) {
+        sendData()
+    }
+}
+function checkEmpty(input) {
+    if (input.value == "") {
+        $('.validation-message').show();
+    }
+    else {
+        $('.validation-message').hide();
+    }
+}
+function sendData() {
     let fname = document.getElementById("fname").value;
     let lname = document.getElementById("lname").value;
     let city = document.getElementById("city").value;
     let state = document.getElementById("state").value;
     let salary = document.getElementById("salary").value;
     let email = document.getElementById("email").value;
-
     let userData = {
         fname: fname,
         lname: lname,
@@ -47,7 +72,6 @@ function postData() {
         salary: salary,
         email: email
     }
-
     $.ajax({
         type: 'POST',
         url: 'http://localhost:3000/employees',
@@ -60,7 +84,6 @@ function postData() {
             console.log(result);
         }
     });
-
     resetFields = () => {
         document.getElementById("fname").value = '';
         document.getElementById("lname").value = '';
@@ -68,7 +91,7 @@ function postData() {
         document.getElementById("state").value = '';
         document.getElementById("salary").value = '';
         document.getElementById("email").value = '';
-    }
+    };
 }
 var modal = document.getElementById("myModal");
 function openModal(id, fname, lname, city, state, salary, email) {
@@ -99,13 +122,13 @@ function putData() {
         salary: salary,
         email: email
     }
-
+    
     $.ajax({
         type: 'PUT',
         url: 'http://localhost:3000/employees/' + empid,
         data: userData,
         success: function (result) {
-            window.location.reload();
+            getData();
         },
         error: function (result) {
             console.log(result);
@@ -117,7 +140,8 @@ function deleteData(id) {
         type: 'DELETE',
         url: 'http://localhost:3000/employees/' + id,
         success: function (result) {
-            window.location.reload();
+            getData();
+            showRedNotification();
         },
         error: function (result) {
             console.log(result);

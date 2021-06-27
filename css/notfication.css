@@ -1,0 +1,41 @@
+.notification {
+  position: absolute;
+  top: 12%;
+  left: 41%;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+}
+.notification-red {
+  display: none;
+  position: fixed;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: rgb(255, 203, 203);
+  border-bottom: 1px solid rgba(255, 179, 179, 0.3);
+  box-shadow: 0px 2px 10px rgba(121, 65, 65, 0.3);
+  color: rgb(150, 10, 10);
+  animation: fade-in 1s;
+}
+.show {
+  /* height: 50px !important; */
+  display: block;
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.notification-green {
+  background-color: rgb(179, 255, 183);
+  box-shadow: 0px 5px 20px rgba(130, 207, 134, 0.5);
+  color: darkgreen;
+}
+.notification-yellow {
+  background-color: rgb(218, 217, 217);
+  box-shadow: 0px 5px 20px rgba(207, 199, 130, 0.5);
+  color: goldenrod;
+}

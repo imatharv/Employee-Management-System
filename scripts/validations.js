@@ -1,120 +1,98 @@
-let checkFname = "";
-let checkLname = "";
-let checkCity = "";
-let checkState = "";
-let checkSalary = "";
-let checkEmail = "";
+let checkFname = '';
+let checkLname = '';
+let checkCity = '';
+let checkState = '';
+let checkSalary = '';
+let checkEmail = '';
 
-$('#submit').attr('disabled', 'disabled');
+let success = '';
+let error = '';
+let check = '';
 
-var fnameRegExp = /^[A-Z]{1}[a-z]{2,}/;
-var lnameRegExp = /^[A-Z]{1}[a-z]{2,}/;
-var cityRegExp = /^[A-Z]{1}[a-z]{2,}/;
-var stateRegExp = /^[A-Z]{1}[a-z]{2,}/;
-var salaryRegExp = /^[1-9]{1}[0-9]{3,}/;
-var emailRegExp = /^[A-Za-z0-9]+([._+-][A-Za-z0-9]+)*@[A-Za-z0-9]+.[A-Za-z]{2,4}([.][A-Za-z]{2})*$/;
+var regexs = {
+    'fname': /^[A-Z]{1}[a-z]{2,}/,
+    'lname': /^[A-Z]{1}[a-z]{2,}/,
+    'city': /^[A-Z]{1}[a-z]{2,}/,
+    'state': /^[A-Z]{1}[a-z]{2,}/,
+    'salary': /^[1-9]{1}[0-9]{3,}/,
+    'email': /^[A-Za-z0-9]+([._+-][A-Za-z0-9]+)*@[A-Za-z0-9]+.[A-Za-z]{2,4}([.][A-Za-z]{2})*$/
+};
 
-$('#fname').on('keyup', function () {
-    $('.validation-container-fname').hide();
-    let fName = fnameRegExp.test($(this).val());
-    if (fName == true) {
-        $('.validation-container-fname.success').show();
-        checkFname = "true";
-        checkAll();
-    } else {
-        $('.validation-container-fname.error').show();
-        checkFname = "false";
-    }
-});
-$('#lname').on('keyup', function () {
-    $('.validation-container-lname').hide();
-    let lName = lnameRegExp.test($(this).val());
-    if (lName == true) {
-        $('.validation-container-lname.success').show();
-        checkLname = "true";
-        checkAll();
-    } else {
-        $('.validation-container-lname.error').show();
-        checkLname = "false";
-    }
-});
-$('#city').on('keyup', function () {
-    $('.validation-container-city').hide();
-    let City = cityRegExp.test($(this).val());
-    if (City == true) {
-        $('.validation-container-city.success').show();
-        checkCity = "true";
-        checkAll();
-    } else {
-        $('.validation-container-city.error').show();
-        checkCity = "false";
-    }
-});
-$('#state').on('keyup', function () {
-    $('.validation-container-state').hide();
-    let State = stateRegExp.test($(this).val());
-    if (State == true) {
-        $('.validation-container-state.success').show();
-        checkState = "true";
-        checkAll();
-    } else {
-        $('.validation-container-state.error').show();
-        checkState = "false";
-    }
-});
-$('#salary').on('keyup', function () {
-    $('.validation-container-salary').hide();
-    let Salary = salaryRegExp.test($(this).val());
-    if (Salary == true) {
-        $('.validation-container-salary.success').show();
-        checkSalary = "true";
-        checkAll();
-    } else {
-        $('.validation-container-salary.error').show();
-        checkSalary = "false";
-    }
-});
-$('#email').on('keyup', function () {
-    $('.validation-container-email').hide();
-    let email = emailRegExp.test($(this).val());
-    if (email == true) {
-        $('.validation-container-email.success').show();
-        checkEmail = "true";
-        checkAll();
-    } else {
-        $('.validation-container-email.error').show();
-        checkEmail = "false";
-    }
-});
+// $('#submit').attr('disabled', 'disabled');
 
-function checkAll() {
-    if (checkFname == "true" && checkLname == "true" && checkCity == "true" && checkState == "true" && checkSalary == "true" && checkEmail == "true") {
-        $('#submit').removeAttr('disabled');
+$('input[type = text]').on('keyup', function () {
+    let type = $(this).attr('id');
+    //let expression = type + 'RegExp';
+    //let expression = getRegex(type);
+    let expression = regexs[type];
+
+    $(this).parent().find('.validation-container').hide();
+    check = expression.test($(this).val());
+    success = $(this).parent().find('.validation-container.success');
+    wrong = $(this).parent().find('.validation-container.error');
+
+    message = $(this).parent().find('.validation-message');
+
+    validateInput(check, success, wrong, message);
+});
+function validateInput(check, success, wrong, message) {
+    if (check) {
+        $(success).show();
+        $(message).attr('display', 'none');
+        checkAll();
+    } else {
+        $(wrong).show();
     }
 }
+function checkAll() {
+    if ($('#fname').val() && $('#lname').val() && $('#city').val() && $('#state').val() && $('#salary').val() && $('#email').val()) {
+        $('#submit').removeAttr('disabled');
+    }
+    // else {
+    //     $('#submit').attr('disabled', 'disabled');
+    // }
+}
 
-//-------------------------------------------------------------------------------
-
-// $('.form-input').on('keyup', function () {
-//     Validation logic goes here
+// $('#fname').on('keyup', function () {
+//     $('.validation-container-fname').hide();
+//     check = fnameRegExp.test($(this).val());
+//     success = ".validation-container-fname.success";
+//     wrong = ".validation-container-fname.error";
+//     validateInput(check, success, wrong);
+// });
+// $('#lname').on('keyup', function () {
+//     $('.validation-container-lname').hide();
+//     check = lnameRegExp.test($(this).val());
+//     success = ".validation-container-lname.success";
+//     wrong = ".validation-container-lname.error";
+//     validateInput(check, success, wrong);
+// });
+// $('#city').on('keyup', function () {
+//     $('.validation-container-city').hide();
+//     check = cityRegExp.test($(this).val());
+//     success = ".validation-container-city.success";
+//     wrong = ".validation-container-city.error";
+//     validateInput(check, success, wrong);
+// });
+// $('#state').on('keyup', function () {
+//     $('.validation-container-state').hide();
+//     check = stateRegExp.test($(this).val());
+//     success = ".validation-container-state.success";
+//     wrong = ".validation-container-state.error";
+//     validateInput(check, success, wrong);
+// });
+// $('#salary').on('keyup', function () {
+//     $('.validation-container-salary').hide();
+//     check = salaryRegExp.test($(this).val());
+//     success = ".validation-container-salary.success";
+//     wrong = ".validation-container-salary.error";
+//     validateInput(check, success, wrong);
+// });
+// $('#email').on('keyup', function () {
+//     $('.validation-container-email').hide();
+//     check = emailRegExp.test($(this).val());
+//     success = ".validation-container-salary.success";
+//     wrong = ".validation-container-salary.error";
+//     validateInput(check, success, wrong);
 // });
 
-// fnameRegExp.test($('#fname').val()) ? $('.validation-container.success').show() : $('.validation-container.error').show();
-    
-//-------------------------------------------------------------------------------
-
-// window.onload = function(){
-//     var inputs = document.getElementsByClassName(".form-input");
-//     if(inputs){
-//         for(var i=0; i<inputs.length; i++){
-//             inputs[i].addEventListener("keyup",validateInput);
-//         }
-//     }
-// };
-// function validateInput(){
-//     if (this.value == "") {
-//         $('.validation-container-email.error').show();
-//     } else {
-//         $('.validation-container-email.success').show();
-//     }
-// }

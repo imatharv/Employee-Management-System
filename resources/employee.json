@@ -10,40 +10,39 @@
       "id": 1
     },
     {
-      "fname": "Ruchee",
-      "lname": "Shukla",
-      "city": "Jalgaon",
-      "state": "Maharashtra",
-      "salary": "50,000",
-      "email": "ruchee@email",
+      "city": "",
+      "state": "",
+      "salary": "",
+      "email": "",
       "id": 2
     },
     {
-      "fname": "Shyam",
-      "lname": "Naik",
-      "city": "Nashik",
-      "state": "Maharashtra",
-      "salary": "50,000",
-      "email": "shyam@email",
+      "city": "",
+      "state": "",
+      "salary": "",
+      "email": "",
       "id": 3
     },
     {
-      "fname": "Sakshi",
-      "lname": "Mujumdar",
-      "city": "Nashik",
-      "state": "Maharashtra",
-      "salary": "55,000",
-      "email": "sakshi@email",
+      "city": "",
+      "state": "",
+      "salary": "",
+      "email": "",
       "id": 4
     },
     {
-      "fname": "Nakul",
-      "lname": "Upadhyay",
-      "city": "Banglore",
-      "state": "Karnataka",
-      "salary": "60000",
-      "email": "nakul@email",
+      "city": "",
+      "state": "",
+      "salary": "",
+      "email": "",
       "id": 5
+    },
+    {
+      "city": "",
+      "state": "",
+      "salary": "",
+      "email": "",
+      "id": 6
     }
   ]
 }

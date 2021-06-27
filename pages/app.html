@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/modal.css">
     <link rel="stylesheet" href="/css/validations.css">
+    <link rel="stylesheet" href="/css/notfication.css">
 
     <title>Dashboard</title>
 </head>
@@ -27,6 +28,15 @@
             <spna>Version 1.0.4</spna>
         </div>
     </nav>
+
+    <!-- Notification divisions -->
+    <div class="notification">
+        <div class="notification-yellow"></div>
+    </div>
+    <div class="notification">
+        <div class="notification-red">Record successfully deleted</div>
+    </div>
+
     <div class="container">
         <nav class="navbar">
             <div>
@@ -50,6 +60,7 @@
                 <table class="table" id="myTable">
                     <thead>
                         <tr>
+                            <th>Sr no.</td>
                             <th>First name</th>
                             <th>Last name</th>
                             <th>City</th>
@@ -141,9 +152,11 @@
         integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer">
         </script>
+    <script src="/scripts/notification.js"></script>
     <script src="/scripts/data-interaction.js"></script>
     <script src="/scripts/modal.js"></script>
     <script src="/scripts/update-validations.js"></script>
+
 </body>
 
 </html>

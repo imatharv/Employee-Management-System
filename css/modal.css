@@ -29,21 +29,11 @@ body,
   border: 1px solid #888;
   width: 50%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  -webkit-animation-name: animate;
-  -webkit-animation-duration: 0.7s;
   animation-name: animate;
   animation-duration: 0.7s;
   border-radius: 5px;
 }
 /* Add Animation */
-@-webkit-keyframes animate {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
 @keyframes animate {
   from {
     opacity: 0;

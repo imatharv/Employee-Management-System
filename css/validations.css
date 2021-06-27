@@ -52,3 +52,10 @@
     color: rgb(13, 202, 13) !important;
     text-shadow: 0px 1px 3px rgba(150, 150, 150, 0.7);
 }
+
+.validation-message {
+    display: none;
+    color: crimson;
+    font-size: 10px;
+    font-style: italic;
+}
